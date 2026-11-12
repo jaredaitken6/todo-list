@@ -16,7 +16,13 @@ function createTodoItem(todoTitle, todoDescription, todoDueDate, todoPriority, t
   };
 }
 
-export const todoItem = createTodoItem('clean', 'use soap', 'may 24', 4, true, true);
+// export const todoItem = createTodoItem('clean', 'use soap', 'may 24', 4, true, true);
+// export const todoItem2 = createTodoItem('sweep', 'with broom', 'dec 28', 2, false, true);
+
+const todoItem = createTodoItem('clean', 'use soap', 'may 24', 4, true, true);
+const todoItem2 = createTodoItem('sweep', 'with broom', 'dec 28', 2, false, true);
+
+export const todoItemsArray = [todoItem, todoItem2];
 
 
 
