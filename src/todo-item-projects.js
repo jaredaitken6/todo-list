@@ -1,36 +1,30 @@
-// an array of project arrays. the project arrays then hold the todo object items
 // import { todoItem } from "./todo-item.js";
 import { todoItemsArray } from "./todo-item.js";
+import { isEmpty } from './checkInputEmpty.js';
 
-// todoItem.greet();
+export const allProjects = [
+    { id: crypto.randomUUID(), name: "Default" }
+];
 
-// got to sort through the todoItems array to find if newProjectCheck is true or false
-// todoItems is an array
-
-export const allProjects = [];
-
+// this is putting todo items into the right folder
 todoItemsArray.forEach((theTodoItem) => {
-//   console.log(`${user.name} is an ${user.role}.`);
-    const newProjectChecked = theTodoItem.newProjectCheck;
-
+//   console.log(`${theTodoItem.todoTitle} is an ${theTodoItem.projectName}.}`);
+    allProjects.forEach((project) => {
+        if (theTodoItem.projectName === project.name) {
+            theTodoItem.projectId = project.id;
+        } else if (isEmpty(theTodoItem.projectName)) {
+            theTodoItem.projectId = allProjects[0].id;
+        } else {
+            allProjects.push({ id: crypto.randomUUID(), name: theTodoItem.projectName });
+            theTodoItem.projectId = allProjects[allProjects.length - 1].id;
+        }
     
-    if (newProjectChecked || !newProjectChecked && allProjects === 0) {
-        allProjects.push([theTodoItem]);
-    } else {
-        allProjects[allProjects.length - 1].push(theTodoItem);
-    }
+    });
 });
 
 
 
 
-// if newProject is false do not make new project array. if it is true than make new array
-// export const newProject = todoItem.newProjectCheck;
 
-// // create new project folder if checked or if there are none
-// if (newProject || !newProject && allProjects === 0) {
-//     allProjects.push([todoItem]);
-// } else {
-//     allProjects[allProjects.length - 1].push(todoItem);
-// }
+
 

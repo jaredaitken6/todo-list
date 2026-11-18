@@ -1,26 +1,32 @@
 // create the to-do item factory function. not es6 class or the outdated constructor function
-// export the object
-// title, description, dueDate, priority and checklist.
 
-function createTodoItem(todoTitle, todoDescription, todoDueDate, todoPriority, todoDoneCheck, newProjectCheck) {
+// function createTodoItem(todoTitle, todoDescription, todoDueDate, todoPriority, todoDoneCheck, projectName, projectId) {
+function createTodoItem(todoTitle, todoDescription, projectName, todoDueDate) { 
+
   return {
     todoTitle: todoTitle,
     todoDescription: todoDescription,
-    todoDueDate: todoDueDate,
-    todoPriority: todoPriority,
-    todoDoneCheck: todoDoneCheck,
-    newProjectCheck: newProjectCheck,
-    greet() {
-      console.log(`${this.todoTitle}, ${this.todoDescription}, ${this.todoDueDate}, ${this.todoPriority}, ${this.todoDoneCheck}, ${this.newProjectCheck}`);
-    }
+    // todoPriority: todoPriority,
+    // todoDoneCheck: todoDoneCheck,
+    projectName: projectName,
+    todoDueDate: todoDueDate
+    // projectId: crypto.randomUUID(),
+    // based on the project name will determine what the to do items projectId is going to be
+    // greet() {
+    //   console.log(`${this.todoTitle}, ${this.todoDescription}, ${this.todoDueDate}, ${this.todoPriority}, ${this.todoDoneCheck}, ${this.projectName}, ${this.projectId}`);
+    // }
+
   };
 }
 
 // export const todoItem = createTodoItem('clean', 'use soap', 'may 24', 4, true, true);
 // export const todoItem2 = createTodoItem('sweep', 'with broom', 'dec 28', 2, false, true);
 
-const todoItem = createTodoItem('clean', 'use soap', 'may 24', 4, true, true);
-const todoItem2 = createTodoItem('sweep', 'with broom', 'dec 28', 2, false, true);
+// const todoItem = createTodoItem('clean', 'use soap', 'may 24', 4, true, true);
+// const todoItem2 = createTodoItem('sweep', 'with broom', 'dec 28', 2, false, true);
+
+const todoItem = createTodoItem('clean', 'use soap', 'Default', "2026-11-28");
+const todoItem2 = createTodoItem('laundry', 'air dry', "New Folder", "2026-11-20");
 
 export const todoItemsArray = [todoItem, todoItem2];
 
