@@ -26,9 +26,10 @@ function createTodoItem(todoTitle, todoDescription, projectName, todoDueDate) {
 // const todoItem2 = createTodoItem('sweep', 'with broom', 'dec 28', 2, false, true);
 
 const todoItem = createTodoItem('clean', 'use soap', 'Default', "2026-11-28");
-const todoItem2 = createTodoItem('laundry', 'air dry', "New Folder", "2026-11-20");
+const todoItem2 = createTodoItem('laundry', 'air dry', "New Folder", "");
+const todoItem3 = createTodoItem('wash car', 'wax', "New Folder", "2026-11-23");
 
-export const todoItemsArray = [todoItem, todoItem2];
+export const todoItemsArray = [todoItem, todoItem2, todoItem3];
 
 
 
