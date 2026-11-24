@@ -7,24 +7,21 @@ export const allProjects = [
 ];
 
 // this is putting todo items into the right folder
+
 todoItemsArray.forEach((theTodoItem) => {
-//   console.log(`${theTodoItem.todoTitle} is an ${theTodoItem.projectName}.}`);
     allProjects.forEach((project) => {
         if (theTodoItem.projectName === project.name) {
             theTodoItem.projectId = project.id;
-        } else if (isEmpty(theTodoItem.projectName)) {
+        } 
+        if (isEmpty(theTodoItem.projectName || theTodoItem.projectName === "default")) {
             theTodoItem.projectId = allProjects[0].id;
-        } else {
-            allProjects.push({ id: crypto.randomUUID(), name: theTodoItem.projectName });
-            theTodoItem.projectId = allProjects[allProjects.length - 1].id;
         }
-    
     });
+    if (!theTodoItem.projectId && allProjects.every(project => project.name !== theTodoItem.projectName)) {
+        allProjects.push({ id: crypto.randomUUID(), name: theTodoItem.projectName });
+        theTodoItem.projectId = allProjects[allProjects.length - 1].id;
+    }
 });
-
-
-
-
 
 
 

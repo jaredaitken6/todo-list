@@ -7,14 +7,19 @@ console.log(greeting);
 import { todoItemsArray } from "./todo-item.js";
 // import { newProject, allProjects } from "./todo-item-projects.js";
 import { allProjects } from "./todo-item-projects.js";
+import { todoItems } from "./local-browser-storage.js";
 
 // todoItem.greet();
 console.log("allProjects array");
 console.log(allProjects);
 console.log("todoItems array");
 console.log(todoItemsArray);
+// console.log("localStorage todoItems array");
+// console.log(todoItems());
 
 /*
     - Add delete task next or add the storage
 */
+
+// on page load get and display the todo items array of objects
 
