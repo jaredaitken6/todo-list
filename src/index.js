@@ -7,15 +7,18 @@ console.log(greeting);
 import { todoItemsArray } from "./todo-item.js";
 // import { newProject, allProjects } from "./todo-item-projects.js";
 import { allProjects } from "./todo-item-projects.js";
-import { todoItems } from "./local-browser-storage.js";
+import { getTodoItems } from "./local-browser-storage.js";
+import { getTodoProjects } from "./local-browser-storage.js";
 
 // todoItem.greet();
 console.log("allProjects array");
 console.log(allProjects);
 console.log("todoItems array");
 console.log(todoItemsArray);
-// console.log("localStorage todoItems array");
-// console.log(todoItems());
+console.log("localStorage todoItems array");
+console.log(getTodoItems());
+console.log("localStorage todoProjects array");
+console.log(getTodoProjects());
 
 /*
     - Add delete task next or add the storage
