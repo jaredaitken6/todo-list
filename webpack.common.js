@@ -14,18 +14,18 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html', 
+            template: './src/template.html', 
         }),
     ],
     module: {
         rules: [
             {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             },
             {
-            test: /\.html$/i,
-            loader: 'html-loader',
+                test: /\.html$/i,
+                loader: 'html-loader',
             }, 
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,

@@ -3,6 +3,7 @@ import { greeting } from "./greeting.js";
 console.log(greeting);
 // end of test
 
+import "./styles.css";
 // import { todoItem } from "./todo-item.js";
 import { todoItemsArray } from "./todo-item.js";
 // import { newProject, allProjects } from "./todo-item-projects.js";
@@ -20,9 +21,4 @@ console.log(getTodoItems());
 console.log("localStorage todoProjects array");
 console.log(getTodoProjects());
 
-/*
-    - Add delete task next or add the storage
-*/
-
-// on page load get and display the todo items array of objects
 
