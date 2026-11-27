@@ -203,3 +203,66 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* start of customized app styles */
 
+:root {
+    --font-body: "Open Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-heading: "Oswald", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+    --bg-app: #2b303a;
+    --secondary-bg-app: #303645;
+    --border-subtle: #585c678a;
+    --text-primary: #e1e5ee;
+}
+
+body {
+    background-color: var(--bg-app);
+}
+
+.folder-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25rem;
+}
+
+#task-folder-list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.todo-project {
+    display: flex;
+    /* gap: 7px; */
+    background-color: var(--secondary-bg-app);
+    padding: 0.70rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-subtle);
+}
+
+.todo-project-btn {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.3rem;
+}
+
+.project-delete-btn {
+    align-self: center;
+    height: auto;
+    line-height: 0.7;
+    border: none;
+    font-size: 2rem;
+}
+
+.todo-project-btn, .project-delete-btn {
+    /* background: transparent; */
+    cursor: pointer;
+    background: transparent;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+}
+
+
+
